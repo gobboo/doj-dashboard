@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-32 pt-6">
+  <div data-theme="cupcake" class="container mx-auto px-32 pt-6">
     <Head>
       <Link rel="preconnect" href="https://fonts.googleapis.com" />
       <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -7,7 +7,7 @@
     </Head>
     <Navbar />
     <div class="flex mt-8 gap-8">
-      <DashboardNav class="flex-grow" v-if="user" v-show="route.path.includes('/dashboard')" />
+      <DashboardNav v-if="user" v-show="route.path.includes('/dashboard')" />
       <NuxtPage />
     </div>
   </div>
