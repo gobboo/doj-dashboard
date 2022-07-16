@@ -108,6 +108,10 @@ defineProps({
 const unknown = 'https://thumbs.dreamstime.com/b/default-avatar-profile-flat-icon-social-media-user-vector-portrait-unknown-human-image-default-avatar-profile-flat-icon-184330869.jpg'
 const getFileUrl = (file) => {
   if (file) {
+    if (!file) {
+      return unknown
+    }
+
     return url.replace('/api', '') + file.data.attributes.url
   }
   return unknown
