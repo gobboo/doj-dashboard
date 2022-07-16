@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <create-client class="absolute" ref="modal" @new-client="addClient" />
-    <clients :clients="clientList" class="flex-grow" @create-client="modal.openModal()" />
+    <clients :clients="clientList" class="flex-grow" @create-client="modal.openModal()" @remove-client="removeClient" />
   </div>
 </template>
 
@@ -30,6 +30,11 @@ definePageMeta({
 
 function addClient (client) {
   clientList.value.push(client)
+}
+
+// Remove client
+function removeClient (id) {
+  clientList.value = clientList.value.filter(client => client.id !== id)
 }
 
 </script>
