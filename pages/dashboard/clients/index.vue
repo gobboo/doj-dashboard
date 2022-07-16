@@ -29,7 +29,7 @@ definePageMeta({
 })
 
 function addClient (client) {
-  clients.value.push(client)
+  clientList.value.push(client)
 }
 
 </script>
