@@ -15,12 +15,14 @@
           </div>
 
           <div class="flex gap-4">
-            <div class="form-control flex-grow mr-1">
-              <label class="label">
-                <span class="label-text">Document Title</span>
-              </label>
-              <input name="title" type="text" placeholder="Joel Conry - Expungement" class="input input-bordered w-full max-w-xs" />
-            </div>
+            <ClientOnly>
+              <div class="form-control flex-grow mr-1">
+                <label class="label">
+                  <span class="label-text">Submission Date</span>
+                </label>
+                <date-picker v-model="date" :enableTimePicker="false" :autoApply="true"></date-picker>
+              </div>
+            </ClientOnly>
             <div class="form-control max-w-xs">
               <label class="label">
                 <span class="label-text">Category</span>
@@ -82,14 +84,19 @@ const isOpen = ref(false)
 const openModal = () => { isOpen.value = true }
 
 const form = ref(null)
+const date = ref(null)
 
 async function createDocument () {
   try {
     isLoading.value = true
 
     const formData = new FormData()
-    formData.append('data', JSON.stringify(Object.fromEntries(new FormData(form.value))))
-
+    formData.append('data', 
+      JSON.stringify({ 
+        ...Object.fromEntries(new FormData(form.value)),
+        submissionDate: date.value
+      }))
+    
     const { data } = await client(`/documents`, {
       method: 'POST',
       body: formData
@@ -100,6 +107,7 @@ async function createDocument () {
       timeout: 5000
     })
 
+    form.value.reset()
     isOpen.value = false
     emit('newDocument', data)
   } catch(e) {

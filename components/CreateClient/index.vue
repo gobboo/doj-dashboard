@@ -109,13 +109,12 @@ async function createClient () {
       body: formData
     })
 
-    console.log(data)
-
     // Success Toast
     toast.success('Successfully created a new client, please refresh the page to see the changes.', {
       timeout: 5000
     })
 
+    form.value.reset()
     isOpen.value = false
     emit('newClient', data)
   } catch(e) {
