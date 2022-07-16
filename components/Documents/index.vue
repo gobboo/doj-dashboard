@@ -20,9 +20,8 @@
             </label>
           </th>
           <th>ID</th>
-          <th>Title</th>
           <th>Category</th>
-          <th>Created</th>
+          <th>Submitted</th>
           <th></th>
         </tr>
       </thead>
@@ -41,12 +40,10 @@
               </div>
             </td>
             <td>
-              {{ attributes.title }}
-            </td>
-            <td>
               {{ attributes.category }}
             </td>
             <td>
+              {{ attributes.submissionDate.split('-')[2] }}/{{ attributes.submissionDate.split('-')[1] }}/{{ attributes.submissionDate.split('-')[0] }}
             </td>
             <th>
               <a class="btn btn-primary btn-circle btn-xs mr-2" :href="attributes.docUrl" target="_blank">
