@@ -27,8 +27,32 @@
               </label>
               <select name="category" class="select select-bordered w-full max-w-xs">
                 <option disabled selected>Select Category</option>
+                <option>Arbitration Agreement</option>
+                <option>Adult Adoption</option>
+                <option>Background Check Form</option>
+                <option>Bail Bond Form</option>
+                <option>Charge Appeal Form</option>
+                <option>Civil Case</option>
+                <option>Contract</option>
+                <option>Court Summons</option>
+                <option>Divorce Proceedings</option>
+                <option>DOJ / PD Complaint Form</option>
+                <option>Event Permit Request Form</option>
                 <option>Expungement</option>
-                <option>Adoption</option>
+                <option>Intent To Press Charges</option>
+                <option>Intent To Sue</option>
+                <option>Living Will</option>
+                <option>Marriage Licence</option>
+                <option>Motion For Dismissal</option>
+                <option>Name Change</option>
+                <option>Ordination Request</option>
+                <option>Plea Deal</option>
+                <option>PreNup</option>
+                <option>Private Real Estate Sale Form</option>
+                <option>Restraining Order </option>
+                <option>Settlement Agreement</option>
+                <option>Search & Seizure Warrant</option>
+                <option>Subpoena</option>
               </select>
             </div>
           </div>
