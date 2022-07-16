@@ -66,7 +66,7 @@
               <button class="btn btn-info btn-circle btn-xs p-1 mr-2">
                 <f-icon icon="fas fa-pen" class="text-white w-4 h-4" />
               </button>
-              <button class="btn btn-error btn-circle btn-xs">
+              <button class="btn btn-error btn-circle btn-xs" @click="deleteClient(id)">
                 <f-icon icon="fas fa-ban" class="text-white w-4 h-4" />
               </button>
             </th>
@@ -83,7 +83,13 @@
 </template>
 
 <script lang="ts" setup>
+import { useToast } from 'vue-toastification';
+
 const url = useStrapiUrl()
+const toast = useToast()
+const { delete: _delete } = useStrapi4()
+
+const emit = defineEmits(['createClient', 'removeClient'])
 
 interface Client {
   id: string
@@ -95,6 +101,15 @@ interface Client {
     email: string
     avatar: string
   }
+}
+
+async function deleteClient (id) {
+  await _delete('clients', id)
+    .then(() => {
+      // Success Toast
+      toast.success('Client Deleted Successfully')
+      emit('removeClient', id)
+    })
 }
 
 defineProps({
