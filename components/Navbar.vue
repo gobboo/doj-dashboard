@@ -16,10 +16,8 @@
           Dashboard
         </button>
       </NuxtLink>
-      <NuxtLink v-else to="/auth">
-        <button class="btn btn-primary ml-14 rounded-full px-6 text-white normal-case">
-          Sign In
-        </button>
+      <NuxtLink v-else class="btn btn-primary ml-14 rounded-full px-6 text-white normal-case" to="/auth">
+        Sign In
       </NuxtLink>
     </div>
 

@@ -48,7 +48,7 @@
               <label
                 class="flex flex-col w-full h-32 border-4 border-purple-300 border-dashed hover:bg-gray-100 hover:border-gray-300">
                 <div class="flex flex-col items-center justify-center pt-7">
-                  <Icon icon="far fa-cloud-arrow-up" class="w-8 h-8 text-gray-400 group-hover:text-gray-600" />
+                  <Icon name="fa6-solid:cloud-arrow-up" class="w-8 h-8 text-gray-400 group-hover:text-gray-600" />
                   <p class="pt-1 text-sm tracking-wider text-gray-400 group-hover:text-gray-600">
                     {{ avatarName || 'Attach an image' }}
                   </p>
@@ -116,6 +116,8 @@ async function createClient () {
 
     form.value.reset()
     isOpen.value = false
+
+    console.log(data)
     emit('newClient', data)
   } catch(e) {
     console.log(e)

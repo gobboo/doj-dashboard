@@ -1,6 +1,6 @@
 <template>
   <div class="w-full mt-20 flex justify-center align-center">
-    <div class="px-8 py-8 rounded-lg w-1/3 h-1/5">
+    <div class="px-8 py-8 rounded-lg h-1/5">
 
       <form class="form-control w-full max-w-xs" @submit.prevent="authenticate">
         <label class="label">
@@ -25,7 +25,6 @@
 </template>
 
 <script lang="ts" setup>
-import { Ref } from 'vue';
 const { login } = useStrapiAuth()
 
 const router = useRouter();

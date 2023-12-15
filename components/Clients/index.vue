@@ -6,7 +6,7 @@
       </h3>
 
       <button class="btn btn-primary normal-case btn-sm text-white" @click="$emit('createClient')">
-        <Icon icon="fa6-solid:plus" class="w-4 h-4 mr-1" />
+        <Icon name="fa6-solid:plus" class="w-4 h-4 mr-1" />
         Create
       </button>
     </div>
@@ -53,7 +53,7 @@
             </td>
             <td>
               <span class="flex gap-1 items-center">
-                <Icon icon="fa6-solid:phone" class="w-4 h-4" />
+                <Icon name="fa6-solid:phone" class="w-4 h-4" />
                 {{ attributes.phoneNumber }}
               </span>
               <span class="badge badge-ghost badge-sm">{{ attributes.email }}</span>
@@ -61,13 +61,13 @@
             <td>3</td>
             <th>
               <NuxtLink class="btn btn-primary btn-circle btn-xs mr-2" :to="`/dashboard/clients/${id}`">
-                <Icon icon="fa6-solid:folders" class="text-white w-4 h-4" />
+                <Icon name="fa6-solid:folder-closed" class="text-white w-4 h-4" />
               </NuxtLink>
               <button class="btn btn-info btn-circle btn-xs p-1 mr-2">
-                <Icon icon="fa6-solid:pen" class="text-white w-4 h-4" />
+                <Icon name="fa6-solid:pen" class="text-white w-4 h-4" />
               </button>
               <button class="btn btn-error btn-circle btn-xs" @click="deleteClient(id)">
-                <Icon icon="fa6-solid:ban" class="text-white w-4 h-4" />
+                <Icon name="fa6-solid:ban" class="text-white w-4 h-4" />
               </button>
             </th>
           </tr>
@@ -122,6 +122,8 @@ defineProps({
 // Fetch uploaded file url from strapi
 const unknown = 'https://thumbs.dreamstime.com/b/default-avatar-profile-flat-icon-social-media-user-vector-portrait-unknown-human-image-default-avatar-profile-flat-icon-184330869.jpg'
 const getFileUrl = (file) => {
+  if(!file) return
+
   if (file.data) {
     return url.replace('/api', '') + file.data.attributes.url
   }

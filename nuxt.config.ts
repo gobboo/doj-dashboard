@@ -6,9 +6,8 @@ export default defineNuxtConfig({
     version: 'v4',
     cookie: {},
   },
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@pinia/nuxt'],
+  modules: ['@nuxtjs/strapi', '@nuxtjs/tailwindcss', 'nuxt-icon', '@pinia/nuxt'],
   build: {
     transpile: ['moment'],
   },
-  buildModules: ['@pinia/nuxt', '@nuxtjs/strapi']
 })
