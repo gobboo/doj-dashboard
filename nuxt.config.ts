@@ -8,6 +8,6 @@ export default defineNuxtConfig({
   },
   modules: ['@nuxtjs/strapi', '@nuxtjs/tailwindcss', 'nuxt-icon', '@pinia/nuxt'],
   build: {
-    transpile: ['moment'],
+    transpile: ['moment', 'vue-toastification'],
   },
 })

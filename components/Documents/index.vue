@@ -42,7 +42,7 @@
             <td>
               {{ attributes.category }}
             </td>
-            <td>
+            <td v-if="attributes.submissionDate">
               {{ attributes.submissionDate.split('-')[2] }}/{{ attributes.submissionDate.split('-')[1] }}/{{ attributes.submissionDate.split('-')[0] }}
             </td>
             <th>
