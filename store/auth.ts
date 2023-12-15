@@ -1,5 +1,3 @@
-import { defineStore } from 'pinia'
-
 export const useAuth = defineStore('auth', {
   // arrow function recommended for full type inference
   state: () => {

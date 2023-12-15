@@ -1,5 +1,3 @@
-import { defineNuxtConfig } from 'nuxt'
-
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   strapi: {
@@ -8,7 +6,7 @@ export default defineNuxtConfig({
     version: 'v4',
     cookie: {},
   },
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-icon'],
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@pinia/nuxt'],
   build: {
     transpile: ['moment'],
   },
