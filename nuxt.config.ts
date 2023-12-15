@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     version: 'v4',
     cookie: {},
   },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-icon'],
   build: {
     transpile: ['moment'],
   },

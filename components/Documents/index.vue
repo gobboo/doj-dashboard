@@ -6,7 +6,7 @@
       </h3>
 
       <button class="btn btn-primary normal-case btn-sm text-white" @click="$emit('createDocument')">
-        <f-icon icon="fas fa-plus" class="w-4 h-4 mr-1" />
+        <Icon icon="fa6-solid:plus" class="w-4 h-4 mr-1" />
         Create
       </button>
     </div>
@@ -47,13 +47,13 @@
             </td>
             <th>
               <a class="btn btn-primary btn-circle btn-xs mr-2" :href="attributes.docUrl" target="_blank">
-                <f-icon icon="fas fa-arrow-up-right-from-square" class="text-white w-4 h-4" />
+                <Icon icon="fa6-solid:arrow-up-right-from-square" class="text-white w-4 h-4" />
               </a>
               <button class="btn btn-info btn-circle btn-xs p-1 mr-2">
-                <f-icon icon="fas fa-pen" class="text-white w-4 h-4" />
+                <Icon icon="fa6-solid:pen" class="text-white w-4 h-4" />
               </button>
               <button class="btn btn-error btn-circle btn-xs" @click="deleteDocument(id)">
-                <f-icon icon="fas fa-ban" class="text-white w-4 h-4" />
+                <Icon icon="fa6-solid:ban" class="text-white w-4 h-4" />
               </button>
             </th>
           </tr>

@@ -6,7 +6,7 @@
       </h3>
 
       <button class="btn btn-primary normal-case btn-sm text-white" @click="$emit('createClient')">
-        <f-icon icon="fas fa-plus" class="w-4 h-4 mr-1" />
+        <Icon icon="fa6-solid:plus" class="w-4 h-4 mr-1" />
         Create
       </button>
     </div>
@@ -53,7 +53,7 @@
             </td>
             <td>
               <span class="flex gap-1 items-center">
-                <f-icon icon="fas fa-phone" class="w-4 h-4" />
+                <Icon icon="fa6-solid:phone" class="w-4 h-4" />
                 {{ attributes.phoneNumber }}
               </span>
               <span class="badge badge-ghost badge-sm">{{ attributes.email }}</span>
@@ -61,13 +61,13 @@
             <td>3</td>
             <th>
               <NuxtLink class="btn btn-primary btn-circle btn-xs mr-2" :to="`/dashboard/clients/${id}`">
-                <f-icon icon="fas fa-folders" class="text-white w-4 h-4" />
+                <Icon icon="fa6-solid:folders" class="text-white w-4 h-4" />
               </NuxtLink>
               <button class="btn btn-info btn-circle btn-xs p-1 mr-2">
-                <f-icon icon="fas fa-pen" class="text-white w-4 h-4" />
+                <Icon icon="fa6-solid:pen" class="text-white w-4 h-4" />
               </button>
               <button class="btn btn-error btn-circle btn-xs" @click="deleteClient(id)">
-                <f-icon icon="fas fa-ban" class="text-white w-4 h-4" />
+                <Icon icon="fa6-solid:ban" class="text-white w-4 h-4" />
               </button>
             </th>
           </tr>
