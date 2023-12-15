@@ -122,7 +122,7 @@ defineProps({
 // Fetch uploaded file url from strapi
 const unknown = 'https://thumbs.dreamstime.com/b/default-avatar-profile-flat-icon-social-media-user-vector-portrait-unknown-human-image-default-avatar-profile-flat-icon-184330869.jpg'
 const getFileUrl = (file) => {
-  if(!file) return
+  if(!file) return unknown
 
   if (file.data) {
     return url.replace('/api', '') + file.data.attributes.url
